@@ -1,0 +1,41 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import './prism.css';
+@import 'tailwindcss/utilities';
+
+.black-2-bg {
+  background-color: #20232a;
+}
+.dark .dark\:black-2-bg {
+  background-color: #20232a;
+}
+.crisp-black {
+  background-color: #171616;
+}
+.hero_hero__KMqi3 {
+  font-size: 52px;
+  line-height: 1.15;
+  letter-spacing: -0.05em;
+  font-weight: 700;
+  text-align: center;
+  margin: 0 0 25px;
+}
+@media (min-width: 768px) {
+  .hero_hero__KMqi3 {
+    font-size: 100px;
+    line-height: 1;
+    font-weight: 800;
+    margin: 0 0 40px;
+  }
+}
+
+.utils_appear-third__JahUD {
+  -webkit-animation-delay: 1.2s;
+  animation-delay: 1.2s;
+}
+.utils_appear__u0bLv {
+  opacity: 0;
+  -webkit-animation: utils_appear__u0bLv 0.8s cubic-bezier(0.1, 0, 0.175, 1)
+    forwards;
+  animation: utils_appear__u0bLv 0.8s cubic-bezier(0.1, 0, 0.175, 1) forwards;
+}

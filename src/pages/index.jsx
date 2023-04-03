@@ -280,8 +280,7 @@ export default function Home({ rooms }) {
             width={CamImage.width}
             height={CamImage.height}
             className="min-h-2xl absolute inset-0 h-full w-full object-cover brightness-150 saturate-0 "
-            srcset="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Froom5.7ce85778.jpeg&amp;w=16&amp;q=75 16w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Froom5.7ce85778.jpeg&amp;w=32&amp;q=75 32w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Froom5.7ce85778.jpeg&amp;w=48&amp;q=75 48w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Froom5.7ce85778.jpeg&amp;w=64&amp;q=75 64w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Froom5.7ce85778.jpeg&amp;w=96&amp;q=75 96w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Froom5.7ce85778.jpeg&amp;w=128&amp;q=75 128w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Froom5.7ce85778.jpeg&amp;w=256&amp;q=75 256w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Froom5.7ce85778.jpeg&amp;w=384&amp;q=75 384w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Froom5.7ce85778.jpeg&amp;w=640&amp;q=75 640w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Froom5.7ce85778.jpeg&amp;w=750&amp;q=75 750w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Froom5.7ce85778.jpeg&amp;w=828&amp;q=75 828w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Froom5.7ce85778.jpeg&amp;w=1080&amp;q=75 1080w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Froom5.7ce85778.jpeg&amp;w=1200&amp;q=75 1200w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Froom5.7ce85778.jpeg&amp;w=1920&amp;q=75 1920w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Froom5.7ce85778.jpeg&amp;w=2048&amp;q=75 2048w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Froom5.7ce85778.jpeg&amp;w=3840&amp;q=75 3840w"
-            src="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Froom5.7ce85778.jpeg&amp;w=3840&amp;q=75"
+            src={room5.src}
             alt=""
           />
           <div className="absolute inset-0 bg-gray-900/90 mix-blend-multiply" />

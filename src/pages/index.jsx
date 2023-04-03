@@ -38,7 +38,7 @@ import room5 from '@/images/room5.jpeg'
 
 import { formatDate } from '@/lib/formatDate'
 // import LandingIntro from '@/components/LandingIntro.jsx'
-import CamImage from '@/images/CamImage.jpeg'
+import CamImage from '@/images/camImage.jpeg'
 import studioRoom from '@/images/studio-room.jpeg'
 import { MobileNavigation, ProfilePhoto } from '@/components/Header'
 

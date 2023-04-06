@@ -243,7 +243,7 @@ function Celebrities() {
         <h2 class="leading-12 text-6xl text-base font-extrabold text-indigo-600">
           #recordingSessions
         </h2>
-        <p class="mt-2 inline-flex rounded-md bg-gray-900  px-3 py-1 text-5xl font-bold tracking-tight text-gray-900 dark:text-slate-200 sm:text-5xl">
+        <p class="mt-2 inline-flex rounded-md px-3  py-1 text-5xl font-bold tracking-tight text-gray-900 dark:bg-gray-900 dark:text-slate-200 sm:text-5xl">
           Artists I&apos;ve worked with
         </p>
         <p class="mt-6 pb-10 text-lg leading-8 text-gray-600 dark:text-slate-200 ">
@@ -433,10 +433,28 @@ export default function Home({ rooms }) {
 
         <Container>
           <figcaption className="mx-0 px-2 pt-6  text-base sm:hidden">
-            <div className="text-4xl font-bold tracking-tight text-zinc-100 dark:text-zinc-100  sm:text-5xl">
-              Cam Duncan
+            <div className="inline-flex text-4xl font-bold tracking-tight text-zinc-100  dark:text-zinc-100 sm:text-5xl">
+              <span>Cam Fonte</span>
+              <span id="verified" className="mt-2.5">
+                <svg
+                  class="mx-2 mr-1.5 mt-1 h-5 w-5 flex-shrink-0 text-blue-400"
+                  x-description="Heroicon name: mini/check-circle"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </span>
             </div>
-            <div className="mt-1 text-gray-400">Recording Engineer</div>
+            <div className="-mt-1 text-indigo-200  sm:-mt-0">
+              Recording Engineer
+            </div>
           </figcaption>
         </Container>
         <div className="mx-auto flex max-w-7xl flex-col items-center gap-x-8 gap-y-10 px-6 pt-10 sm:gap-y-8 lg:px-8 xl:flex-row xl:items-stretch">
@@ -454,10 +472,26 @@ export default function Home({ rooms }) {
           <div className="z-10 w-full max-w-2xl xl:max-w-none xl:flex-auto xl:px-16 xl:py-24">
             <div className="grid grid-cols-2 px-4 sm:-mt-36 lg:-mt-20 lg:px-0">
               <figcaption className="sr-only mx-0 text-base sm:not-sr-only ">
-                <div className="text-4xl font-bold tracking-tight text-zinc-200 dark:text-zinc-100 sm:text-5xl ">
-                  Cam Duncan
+                <div className="inline-flex text-4xl font-bold tracking-tight text-zinc-100  dark:text-zinc-100 sm:text-5xl">
+                  <span>Cam Fonte</span>
+                  <span id="verified" className="mt-4">
+                    <svg
+                      class="mx-2 mr-1.5 mt-1 h-7 w-7 flex-shrink-0 text-blue-400"
+                      x-description="Heroicon name: mini/check-circle"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                        clip-rule="evenodd"
+                      ></path>
+                    </svg>
+                  </span>
                 </div>
-                <div className="mt-1 text-gray-400 sm:text-xl sm:text-indigo-600">
+                <div className="mt-1 text-indigo-200 sm:text-xl sm:text-indigo-200">
                   Recording Engineer
                 </div>
               </figcaption>
@@ -479,21 +513,23 @@ export default function Home({ rooms }) {
                 <use href="#b56e9dab-6ccb-4d32-ad02-6b4bb5d9bbeb" x={86} />
               </svg>
               <blockquote className="text-xl font-semibold leading-8 text-white sm:text-2xl sm:leading-9">
+                <div className="-mt-8 mb-4 text-base text-indigo-200  sm:-mt-0 sm:hidden">
+                  About
+                </div>
                 <p>
-                  I am a professional studio engineer who works in the field of
-                  audio recording and production. My main responsibility is to
-                  operate and maintain the equipment used in a recording studio,
-                  ensuring that the sound quality is of the highest standard. I
-                  worked closely with artists and producers to capture the best
-                  possible performances, mixing and editing audio tracks to
-                  create a finished product that meets the artistic vision of
-                  the project. I also have a strong understanding of acoustics
-                  and the ability to troubleshoot technical issues that may
-                  arise during a recording session. I possess excellent
-                  communication skills, attention to detail, and a passion for
-                  music and audio production.
+                  Adaptable Audio Engineer bringing 5+ years of experience
+                  recording, mixing and mastering sound in professional
+                  recording studio environments. Recognized for achieving
+                  technical excellence with each project. Creative with advanced
+                  Auto-Tune and Melodyne skills for desired pitch correction.
+                  Proficient in operating large-format recording and mixing
+                  consoles. Connects well with clients to achieve desired sounds
+                  for productions.
                 </p>
-                <div id="about-social-communication" className="inline-flex">
+                <div
+                  id="about-social-communication"
+                  className="mt-4 inline-flex "
+                >
                   <h4 className="mt-2 text-base text-slate-200">Find me on </h4>
                   <span className="-ml-0 -mt-3  sm:-ml-20 sm:-mt-5">
                     <SocialMediaHandles />

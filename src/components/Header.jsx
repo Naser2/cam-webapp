@@ -90,8 +90,8 @@ const contacts = [
   },
   {
     name: 'Email',
-    description: 'camengineerr@gmail.com',
-    href: '##',
+    description: 'cam@voxhills.com',
+    href: 'mailto:cam@voxhills.com',
     icon: EnvelopeIcon,
   },
 ]
@@ -125,7 +125,7 @@ export function MobileNavigation(props) {
         >
           <Popover.Panel
             focus
-            className="fixed inset-x-4 top-8 z-50 origin-top rounded-3xl  ring-1 ring-zinc-900/5 dark:bg-zinc-900 dark:ring-zinc-800"
+            className="fixed inset-x-4 top-8 z-50 origin-top rounded-3xl  bg-white ring-1 ring-zinc-900/5 dark:bg-zinc-900 dark:ring-zinc-800"
           >
             <div id="body" className="p-8">
               <div className="flex flex-row-reverse items-center justify-between">
@@ -162,14 +162,16 @@ export function MobileNavigation(props) {
               <div className="mb-4 rounded-b rounded-b-lg  bg-gradient-to-r from-[#ff4694] to-[#776fff] px-4 py-4 opacity-[0.45]">
                 <a
                   href="##"
-                  className="flow-root rounded-md  transition duration-150 ease-in-out hover:bg-gray-100 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50"
+                  className="flow-root rounded-md  transition duration-150 ease-in-out  focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50"
                 >
-                  <span className="flex items-center">
-                    <h2 className="text-sm font-medium text-white dark:text-white">
+                  <span className="flex-inline flex w-full">
+                    <h2 className="flex text-sm font-medium text-white dark:text-white">
                       Social Media Handles
+                      <span className="-mt-6">
+                        <SocialMediaHandles />
+                      </span>
                     </h2>
                   </span>
-                  <SocialMediaHandles />
                 </a>
               </div>
             </div>
@@ -200,22 +202,6 @@ function NavItem({ href, children }) {
         )}
       </Link>
     </li>
-  )
-}
-
-function DesktopNavigation(props) {
-  return (
-    <nav {...props}>
-      <ul className="flex rounded-full bg-white/90 px-3 text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-white/10">
-        <NavItem href="/">Home</NavItem>
-        <NavItem href="/about">About</NavItem>
-        <NavItem href="/articles">Articles</NavItem>
-        <NavItem href="/calendar">Calendar</NavItem>
-        <NavItem href="/foundation">Foundation</NavItem>
-        <NavItem href="/competitions">Competitions</NavItem>
-        <NavItem href="/contact">Contact</NavItem>
-      </ul>
-    </nav>
   )
 }
 

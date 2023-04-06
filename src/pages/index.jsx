@@ -336,7 +336,7 @@ export default function Home({ rooms }) {
   return (
     <>
       <Head>
-        <title>Cam Duncan - Studio Engineer based in NYC</title>
+        <title>Cam Fonte - Studio Engineer based in NYC</title>
         <meta
           name="description"
           content="I’m Cam, a studio Engineer  based in New York City."

@@ -36,12 +36,18 @@ import room2 from '@/images/room2.jpeg'
 import room3 from '@/images/room3.jpeg'
 import room5 from '@/images/room5.jpeg'
 
+import session1 from '@/images/new-photos/cam-celebrity-1.png'
+import session2 from '@/images/new-photos/cam-celebrity-2.png'
+import session3 from '@/images/new-photos/cam-celebrity-3.png'
+import session4 from '@/images/new-photos/cam-celebrity-4.png'
+
 import { formatDate } from '@/lib/formatDate'
 // import LandingIntro from '@/components/LandingIntro.jsx'
 import CamImage from '@/images/camImage.jpeg'
 import studioRoom from '@/images/studio-room.jpeg'
 import { MobileNavigation, ProfilePhoto } from '@/components/Header'
-
+import CamMain from '@/images/new-photos/cam-2.png'
+import CamLandinBg from '@/images/new-photos/cam-main.png'
 function MailIcon(props) {
   return (
     <svg
@@ -104,7 +110,7 @@ function ArrowDownIcon(props) {
 function SocialLink({ icon: Icon, ...props }) {
   return (
     <Link className="group -m-1 p-1" {...props}>
-      <Icon className="h-6 w-6 fill-sky-500 transition group-hover:fill-sky-600 dark:fill-sky-400 dark:group-hover:fill-sky-600" />
+      <Icon className="h-6 w-6 fill-white transition group-hover:fill-sky-600 dark:fill-sky-100 dark:group-hover:fill-sky-600" />
     </Link>
   )
 }
@@ -204,8 +210,74 @@ function Rooms() {
     </div>
   )
 }
+const celebsSessions = [
+  {
+    name: 'Fat Joe',
+    size: '3.9 MB',
+    source: session1,
+    current: true,
+  },
+  { name: 'Antonio Brown', size: '3.9 MB', source: session2, current: true },
+  {
+    name: 'Christyopher Williams',
+    size: '3.9 MB',
+    source: session4,
+    current: true,
+  },
+
+  {
+    name: 'Yo Pierre Bourne',
+    size: '3.9 MB',
+    source: session3,
+    current: true,
+  },
+
+  // More files...
+]
+function Celebrities() {
+  let rotations = ['rotate-2', '-rotate-2', 'rotate-2', 'rotate-2', '-rotate-2']
+
+  return (
+    <div className="mx-4 mt-16  sm:mt-20">
+      <div class="mx-auto max-w-2xl sm:text-center">
+        <h2 class="leading-12 text-6xl text-base font-extrabold text-indigo-600">
+          #recordingSessions
+        </h2>
+        <p class="mt-2 inline-flex rounded-md bg-gray-900  px-3 py-1 text-5xl font-bold tracking-tight text-gray-900 dark:text-slate-200 sm:text-5xl">
+          Artists I&apos;ve worked with
+        </p>
+        <p class="mt-6 pb-10 text-lg leading-8 text-gray-600 dark:text-slate-200 ">
+          Artists I had a chance to work with on projects.
+        </p>
+      </div>
+      <div className="-my-4 flex gap-5 overflow-scroll  py-4 sm:justify-center sm:gap-8">
+        {celebsSessions.map((celeb) => (
+          <div
+            key={celeb.name}
+            className={clsx(
+              'sm:w-54 relative flex aspect-[10/12] w-64 flex-none  rounded-xl  bg-zinc-100 dark:bg-zinc-800 sm:aspect-[9/10]  sm:w-72 sm:rounded-2xl'
+            )}
+          >
+            <Image
+              src={celeb.source.src}
+              alt=""
+              width={300}
+              height={300}
+              sizes="(min-width: 640px) 18rem, 11rem"
+              className="absolute inset-0 h-full w-full rounded-xl object-cover"
+            />{' '}
+            <div class="flex-block sm:px:6 absolute bottom-0 z-50 mt-6 h-20 w-full overflow-hidden  bg-black px-6  py-2 text-lg leading-8 text-gray-600 dark:text-slate-400">
+              <h1 className="text-white">{celeb.name}</h1>
+              <h4 className="textr-sm">recorded let the sun shine</h4>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  )
+}
 export const SocialMediaHandles = () => (
-  <Container className="mt-4 md:mt-8">
+  <Container className="mt-4 md:mt-8 ">
     <div className="max-w-2xl">
       <div className="mt-6 flex gap-6 ">
         <SocialLink
@@ -274,18 +346,18 @@ export default function Home({ rooms }) {
           content="I’m Cam, a studio Engineer  based in New York City."
         />
       </Head>
-      <div className="max-w-10xl hero_hero__KMqi3 mx-auto -mt-20 lg:-mt-40">
-        <div className=" relative min-h-[600px] overflow-hidden bg-gray-900  shadow-xl sm:min-h-[940px] ">
+      <div className="max-w-10xl mx-auto -mt-20  lg:-mt-20">
+        <div className=" relative min-h-[600px] overflow-hidden bg-gray-900  shadow-xl sm:min-h-[940px]">
           <Image
-            width={CamImage.width}
-            height={CamImage.height}
-            className="min-h-2xl absolute inset-0 h-full w-full object-cover brightness-150 saturate-0 "
-            src={room5.src}
+            width={CamLandinBg.width}
+            height={CamLandinBg.height}
+            className="min-h-2xl absolute inset-x-0 mt-4 h-full  w-full object-cover brightness-200 saturate-0 lg:mt-4 "
+            src={CamLandinBg.src}
             alt=""
           />
           <div className="absolute inset-0 bg-gray-900/90 mix-blend-multiply" />
           <div
-            className="absolute -left-80 -top-56 transform-gpu blur-3xl"
+            className="absolute -left-80 -top-56 -mt-2 transform-gpu blur-3xl"
             aria-hidden="true"
           >
             <div
@@ -309,7 +381,7 @@ export default function Home({ rooms }) {
             />
           </div>
           <div
-            className=" align-center justify-content-center relative mx-auto max-w-4xl justify-center
+            className="align-center justify-content-center relative mx-auto  max-w-4xl justify-center
             px-6 py-40 sm:px-10 sm:py-64 md:px-12 lg:px-14 "
           >
             <figure>
@@ -337,16 +409,16 @@ export default function Home({ rooms }) {
                   everyone.
                 </h2> */}
                 <div id="headIcon" className="sm:mt-20">
-                  <ProfilePhoto />
+                  {/* <ProfilePhoto /> */}
                 </div>
               </blockquote>
             </figure>
           </div>
         </div>
       </div>
-      <div id="separator" className="h-4 bg-sky-400"></div>
+      <div id="separator" className="h-0.5 bg-sky-400"></div>
 
-      <div className="relative z-10 mt-0 bg-gray-900 pb-20  sm:pb-24 xl:pb-0">
+      <div className="relative z-10 mt-0 bg-gray-900 bg-gradient-to-r from-[#ff4694] to-[#776fff]  pb-20 dark:opacity-[1] sm:pb-24 xl:pb-0">
         <div className="absolute inset-0 overflow-hidden" aria-hidden="true">
           <div className="absolute left-[calc(50%-19rem)] top-[calc(50%-36rem)]  transform-gpu  blur-3xl">
             <div
@@ -369,12 +441,12 @@ export default function Home({ rooms }) {
         </Container>
         <div className="mx-auto flex max-w-7xl flex-col items-center gap-x-8 gap-y-10 px-6 pt-10 sm:gap-y-8 lg:px-8 xl:flex-row xl:items-stretch">
           <div className="mt-0 w-full max-w-2xl  sm:-mt-8 xl:-mb-8 xl:w-96 xl:flex-none">
-            <div className="relative aspect-[1/1] h-full sm:aspect-[1/1] sm:aspect-[2/1] md:-mx-8  xl:aspect-auto">
+            <div className="relative z-50 aspect-[1/1] h-full dark:opacity-[1]  sm:aspect-[1/1] sm:aspect-[2/1] md:-mx-8 xl:aspect-auto">
               <Image
-                width={CamImage.width}
-                height={CamImage.height}
-                className="absolute  inset-0 h-full w-full rounded-2xl bg-gray-800 object-cover shadow-2xl"
-                src={CamImage.src}
+                width={CamMain.width}
+                height={CamMain.height}
+                className="absolute  inset-0 h-full w-full rounded-2xl bg-gray-800 object-cover shadow-2xl "
+                src={CamMain.src}
                 alt=""
               />
             </div>
@@ -421,6 +493,12 @@ export default function Home({ rooms }) {
                   communication skills, attention to detail, and a passion for
                   music and audio production.
                 </p>
+                <div id="about-social-communication" className="inline-flex">
+                  <h4 className="mt-2 text-base text-slate-200">Find me on </h4>
+                  <span className="-ml-0 -mt-3  sm:-ml-20 sm:-mt-5">
+                    <SocialMediaHandles />
+                  </span>
+                </div>
               </blockquote>
               {/* <figcaption className="mt-8 text-base">
                 <div className="font-semibold text-white">Judith Black</div>
@@ -430,13 +508,14 @@ export default function Home({ rooms }) {
           </div>
         </div>
       </div>
-      <div className="mt-10 sm:mt-56">
+      <Celebrities />
+      <div className="mt-10 sm:mt-24">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl sm:text-center">
-            <h2 className="leading-12 text-base text-6xl font-extrabold text-indigo-600">
+            <h2 className="leading-12 text-6xl text-base font-extrabold text-indigo-600">
               Everything you need
             </h2>
-            <p className="mt-2 text-5xl font-bold tracking-tight text-gray-900 dark:text-slate-200 sm:text-5xl">
+            <p className="mt-2 inline-flex rounded-md  bg-gradient-to-r from-[#ff4694] to-[#776fff] px-3 py-1 text-5xl font-bold tracking-tight text-gray-900 dark:text-slate-200 sm:text-5xl">
               Studio Space ?
             </p>
             <p className="mt-6 text-lg leading-8 text-gray-600 dark:text-slate-200">

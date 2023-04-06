@@ -98,7 +98,7 @@ const contacts = [
 export function MobileNavigation(props) {
   return (
     <Popover {...props}>
-      <Popover.Button className="group flex items-center rounded-full bg-white/90 px-4 py-2 text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-white/10 dark:hover:ring-white/20">
+      <Popover.Button className="group flex items-center rounded-full  bg-gradient-to-r from-[#ff4694] to-[#776fff] px-4 py-2 text-sm font-medium text-white shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-white/10 dark:hover:ring-white/20">
         Contact
         <ChevronDownIcon className="ml-3 h-auto w-2 stroke-zinc-500 group-hover:stroke-zinc-700 dark:group-hover:stroke-zinc-400" />
       </Popover.Button>
@@ -125,11 +125,11 @@ export function MobileNavigation(props) {
         >
           <Popover.Panel
             focus
-            className="fixed inset-x-4 top-8 z-50 origin-top rounded-3xl bg-white  ring-1 ring-zinc-900/5 dark:bg-zinc-900 dark:ring-zinc-800"
+            className="fixed inset-x-4 top-8 z-50 origin-top rounded-3xl  ring-1 ring-zinc-900/5 dark:bg-zinc-900 dark:ring-zinc-800"
           >
             <div id="body" className="p-8">
               <div className="flex flex-row-reverse items-center justify-between">
-                <Popover.Button aria-label="Close menu" className="-m-1 p-1">
+                <Popover.Button aria-label="Close menu" className="-m-1 p-1 ">
                   <CloseIcon className="h-6 w-6 text-zinc-500 dark:text-zinc-400" />
                 </Popover.Button>
                 <h2 className="text-sm font-medium text-zinc-600 dark:text-zinc-400">
@@ -159,13 +159,13 @@ export function MobileNavigation(props) {
               </nav>
             </div>
             <div id="footer" className="rounded-b-lg px-4">
-              <div className="mb-4 rounded-b-lg rounded-b bg-gray-200 px-4 py-4">
+              <div className="mb-4 rounded-b rounded-b-lg  bg-gradient-to-r from-[#ff4694] to-[#776fff] px-4 py-4 opacity-[0.45]">
                 <a
                   href="##"
                   className="flow-root rounded-md  transition duration-150 ease-in-out hover:bg-gray-100 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50"
                 >
                   <span className="flex items-center">
-                    <h2 className="text-sm font-medium text-zinc-600 dark:text-zinc-800">
+                    <h2 className="text-sm font-medium text-white dark:text-white">
                       Social Media Handles
                     </h2>
                   </span>
@@ -245,11 +245,11 @@ function ModeToggle() {
     <button
       type="button"
       aria-label="Toggle dark mode"
-      className="group rounded-full bg-white/90 px-3 py-2 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur transition dark:bg-zinc-800/90 dark:ring-white/10 dark:hover:ring-white/20"
+      className="group rounded-full bg-gradient-to-r from-[#ff4694] to-[#776fff] px-3 py-2 opacity-[0.45] shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur transition dark:bg-zinc-800/90 dark:ring-white/10 dark:hover:ring-white/20"
       onClick={toggleMode}
     >
-      <SunIcon className="h-6 w-6 fill-zinc-100 stroke-zinc-500 transition group-hover:fill-zinc-200 group-hover:stroke-zinc-700 dark:hidden [@media(prefers-color-scheme:dark)]:fill-sky-50 [@media(prefers-color-scheme:dark)]:stroke-sky-500 [@media(prefers-color-scheme:dark)]:group-hover:fill-sky-50 [@media(prefers-color-scheme:dark)]:group-hover:stroke-sky-600" />
-      <MoonIcon className="hidden h-6 w-6 fill-zinc-700 stroke-zinc-500 transition dark:block [@media(prefers-color-scheme:dark)]:group-hover:stroke-zinc-400 [@media_not_(prefers-color-scheme:dark)]:fill-sky-400/10 [@media_not_(prefers-color-scheme:dark)]:stroke-sky-500" />
+      <SunIcon className="h-6 w-6 fill-zinc-100 stroke-zinc-200 transition group-hover:fill-zinc-200 group-hover:stroke-zinc-700 dark:hidden [@media(prefers-color-scheme:dark)]:fill-sky-50 [@media(prefers-color-scheme:dark)]:stroke-sky-500 [@media(prefers-color-scheme:dark)]:group-hover:fill-sky-50 [@media(prefers-color-scheme:dark)]:group-hover:stroke-sky-600" />
+      <MoonIcon className="hidden h-6 w-6 fill-zinc-700 stroke-zinc-200 transition dark:block [@media(prefers-color-scheme:dark)]:group-hover:stroke-zinc-400 [@media_not_(prefers-color-scheme:dark)]:fill-sky-400/10 [@media_not_(prefers-color-scheme:dark)]:stroke-sky-500" />
     </button>
   )
 }
